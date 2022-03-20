@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "useJSXTextNode": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "tsconfigRootDir": "client",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint","import", "@typescript-eslint", "jest", "prettier"
+    ],
+    "rules": {
+        "linebreak-style": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/explicit-module-boundary-types": ["off"],
+        "@typescript-eslint/no-explicit-any": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+                {
+                    "js": "never",
+                    "jsx": "never",
+                    "ts": "never",
+                    "tsx": "never"
+                }
+        ]
+    }
+}
