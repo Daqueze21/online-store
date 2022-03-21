@@ -1,9 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import userReducer from "./reducers/UserSlice";
 
 const rootReducer = combineReducers({
-  // searchReducer,
-  // [cryptoApi.reducerPath]: cryptoApi.reducer,
-  // [newsApi.reducerPath]: newsApi.reducer
+  userReducer,
 });
 
 export const setupStore = () => {

@@ -1,26 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IUser } from "../../models/IUser";
 
 // export type SearchStateType = {
 //   status: string;
 // };
 
 export type UserStateType = {
-  status: string;
+  user: IUser;
   isLoading: boolean;
   error: string;
 };
 
 const initialState: UserStateType = {
-  status: "Pending",
+  user: {
+    id: 123,
+    login: "userlogin",
+    password: "userpasword",
+    status: "user",
+    name: "alex",
+    address: "minsk",
+  },
   isLoading: false,
   error: "no error",
 };
 
 // reducer
-const searchSlice = createSlice({
-  name: "Search",
+const userSlice = createSlice({
+  name: "User",
   initialState,
   reducers: {},
 });
 
-export default searchSlice.reducer;
+export default userSlice.reducer;
