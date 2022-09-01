@@ -1,45 +1,29 @@
-import React, { useState } from "react";
-import AppRouter from "./components/AppRouter";
+import React from "react";
+import { Routes, Route } from 'react-router-dom';
 import { Layout, Menu } from "antd";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-
-<MenuFoldOutlined />;
+// import {
+//   MenuUnfoldOutlined,
+//   MenuFoldOutlined,
+//   UserOutlined,
+//   VideoCameraOutlined,
+//   UploadOutlined,
+// } from "@ant-design/icons";
+// import Navbar from "./components/Navbar/Navbar";
+import "./app.scss";
+import { Admin, Shop } from "pages";
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const App = () => {
-  const [showSider, setShowSider] = useState<boolean>(false);
 
-  const toggleMenu = () => {
-    setShowSider(!showSider);
-  };
-
+const AppWrapper: React.FC = () => {
   return (
-    <Layout>
-      <Sider
-        width={256}
-        style={{ background: "#356877", minHeight: "100vh", color: "blue" }}
-        trigger={null}
-        collapsible
-        collapsed={showSider}
-      >
-        Sider
-      </Sider>
-      <Layout>
-        <Header style={{ background: "#555", textAlign: "center", padding: 0 }}>
-          {showSider ? (
-            <MenuUnfoldOutlined onClick={toggleMenu} />
-          ) : (
-            <MenuFoldOutlined onClick={toggleMenu} />
-          )}
-        </Header>
-        <AppRouter />
-        {/* <Content>Content</Content> */}
-        <Footer>Footer</Footer>
-      </Layout>
-    </Layout>
-    // <AppRouter />
+    <>
+      <Routes>
+        <Route path='/' element={<Admin />} />
+        <Route path='/shop' element={<Shop />} />
+      </Routes>
+    </>
   );
 };
 
-export default App;
+export default AppWrapper;
