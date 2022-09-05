@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { IUser } from "../../models/IUser";
 
 // export type SearchStateType = {
@@ -15,7 +16,7 @@ const initialState: UserStateType = {
   user: {
     id: 123,
     login: "userlogin",
-    password: "userpasword",
+    password: "userpassword",
     status: "user",
     name: "alex",
     address: "minsk",
