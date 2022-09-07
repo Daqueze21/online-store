@@ -1,19 +1,19 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import { authRoutes, publicRoutes } from "../routes";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import { Admin, Auth, Basket, ProductsPage, Shop } from "../pages";
+// import { authRoutes, publicRoutes } from "../routes";
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
-  PRODUCTS_ROUTE,
   LOGIN_ROUTE,
+  PRODUCTS_ROUTE,
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
 } from "../utils/const";
-import { Admin, Auth, Basket, ProductsPage, Shop } from "../pages";
 
 const AppRouter = () => {
   const isAuth = false;
-  console.log(SHOP_ROUTE, PRODUCTS_ROUTE);
 
   return (
     <Routes>

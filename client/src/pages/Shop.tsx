@@ -1,7 +1,9 @@
 import React from "react";
+
+import { Layout } from "antd";
+
 import { useAppSelector } from "../hooks/redux";
 import { RootState } from "../store/store";
-import { Layout } from "antd";
 
 const { Content } = Layout;
 

@@ -1,8 +1,8 @@
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
-  PRODUCTS_ROUTE,
   LOGIN_ROUTE,
+  PRODUCTS_ROUTE,
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
 } from "./utils/const";
