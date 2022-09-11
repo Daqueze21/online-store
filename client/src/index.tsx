@@ -19,13 +19,3 @@ root.render(
     </BrowserRouter>
   </Provider>
 );
-
-// ReactDOM.render(
-
-//     <Provider store={store}>
-//       <BrowserRouter>
-//     <AppWrapper />
-//    </BrowserRouter>
-//     </Provider>,
-//   document.getElementById("root")
-// );

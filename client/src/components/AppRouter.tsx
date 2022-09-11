@@ -1,8 +1,11 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { useAppSelector } from "hooks/redux";
 
-import { Admin, Auth, Basket, ProductsPage, Shop } from "../pages";
-// import { authRoutes, publicRoutes } from "../routes";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { RootState } from "store/store";
+
+import { Admin, Auth, Basket, ProductsPage, Shop } from "pages";
+
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
@@ -13,11 +16,12 @@ import {
 } from "../utils/const";
 
 const AppRouter = () => {
-  const isAuth = false;
+  // const isAuth = false;
+  const user = useAppSelector((state: RootState) => state.userReducer);
 
   return (
     <Routes>
-      {isAuth && (
+      {user && (
         <>
           <Route path={ADMIN_ROUTE} element={<Admin />} />
           <Route path={BASKET_ROUTE} element={<Basket />} />

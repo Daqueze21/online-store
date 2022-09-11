@@ -1,8 +1,9 @@
 import React from "react";
+
 import { Layout } from "antd";
 
 const Basket = () => {
-  return <Layout>shop</Layout>;
+  return <Layout>basket</Layout>;
 };
 
 export default Basket;

@@ -10,7 +10,7 @@ import {
 } from "@ant-design/icons";
 // import { Route, Routes } from "react-router-dom";
 import { Layout } from "antd";
-import AppRouter from "components/AppRouter";
+import { AppRouter } from "components";
 
 import Navbar from "./components/Navbar/Navbar";
 
@@ -26,7 +26,7 @@ const AppWrapper: React.FC = () => {
 
   return (
     <Layout>
-      <Sider
+      {/* <Sider
         width={256}
         style={{ background: "#356877", minHeight: "100vh", color: "blue" }}
         trigger={null}
@@ -34,7 +34,7 @@ const AppWrapper: React.FC = () => {
         collapsed={showSider}
       >
         Sider
-      </Sider>
+      </Sider> */}
       <Layout>
         <Header style={{ background: "#555", textAlign: "center", padding: 0 }}>
           {showSider ? (
@@ -43,7 +43,9 @@ const AppWrapper: React.FC = () => {
             <MenuFoldOutlined onClick={toggleMenu} />
           )}
         </Header>
+
         <AppRouter />
+
         {/* <Content>Content</Content> */}
         <Footer>Footer</Footer>
       </Layout>

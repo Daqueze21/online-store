@@ -1,10 +1,9 @@
 import React from "react";
 
 import { Layout } from "antd";
+import { useAppSelector } from "hooks/redux";
 
-import { useAppSelector } from "../hooks/redux";
-import { RootState } from "../store/store";
-
+import { RootState } from "store/store";
 const { Content } = Layout;
 
 const Shop = () => {
