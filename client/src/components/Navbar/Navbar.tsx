@@ -1,24 +1,24 @@
-import React from "react";
-import { Button, Layout, Menu } from "antd";
-import Icon from "@ant-design/icons";
-import Avatar from "antd/lib/avatar/avatar";
+import React from 'react';
 
-import styles from "./style.module.scss";
+import Icon from '@ant-design/icons';
+import {Button, Layout, Menu} from 'antd';
+import Avatar from 'antd/lib/avatar/avatar';
 
-const { Header } = Layout;
+import styles from './style.module.scss';
+
+const {Header} = Layout;
 
 const Navbar = () => {
-  return (
-    <Header
-      // style={{
-      //   background: "#555",
-      //   textAlign: "center",
-      //   padding: 0,
-      //   alignItems: "center",
-      // }}
-      className={styles.header}
-    >
-      {/* <Menu theme="dark" mode="inline">
+	return (
+		<Header
+			// style={{
+			//   background: "#555",
+			//   textAlign: "center",
+			//   padding: 0,
+			//   alignItems: "center",
+			// }}
+			className={styles.header}>
+			{/* <Menu theme="dark" mode="inline">
         <Menu.Item
           style={{
             float: "right",
@@ -28,23 +28,14 @@ const Navbar = () => {
             width: "180px",
           }}
         > */}
-      <a>
-        <Icon
-          type="notification"
-          style={{ fontSize: 20, color: "white" }}
-          color="white"
-        />
-      </a>
-      <a>
-        <Icon type="message" style={{ fontSize: 20, color: "white" }} />
-      </a>
-      {/* { this.props.sessionStore.isMobileMenu ? */}
-      {/* <Button onClick={() => console.log("button")} icon="bars" ghost /> : */}
-      <Avatar src={"https://html5css.ru/howto/img_avatar.png"} />
-      {/* </Menu.Item>
+
+			{/* { this.props.sessionStore.isMobileMenu ? */}
+			{/* <Button onClick={() => console.log("button")} icon="bars" ghost /> : */}
+			<Avatar src="https://html5css.ru/howto/img_avatar.png" />
+			{/* </Menu.Item>
       </Menu> */}
-    </Header>
-  );
+		</Header>
+	);
 };
 
 export default Navbar;

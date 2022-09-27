@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 
-import { Layout } from "antd";
+import {Layout} from 'antd';
 
 const Auth = () => {
-  return <Layout>auth</Layout>;
+	return <Layout>auth</Layout>;
 };
 
 export default Auth;

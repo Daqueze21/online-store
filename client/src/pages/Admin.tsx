@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Layout } from "antd";
+import React, {useState} from 'react';
+
+import {Layout} from 'antd';
 
 const Admin = () => {
-  return <Layout>Admin</Layout>;
+	return <Layout>Admin</Layout>;
 };
 
 export default Admin;
