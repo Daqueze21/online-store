@@ -1,0 +1,43 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+
+.authWrapper {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  @include for-mobile-only {
+    margin: auto auto;
+  }
+
+  .form {
+    max-width: 600px;
+
+    &Row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .input {
+      max-width: 300px;
+    }
+
+    .accountLink {
+      margin-bottom: 10px;
+    }
+
+    @include for-mobile-only {
+      max-width: 400px;
+      padding: 0 10px;
+    }
+  }
+}

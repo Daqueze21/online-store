@@ -75,11 +75,14 @@
       .loginBtn {
         color: $white;
         font-size: 15px;
+
+        &:hover {
+          background: $btn-hover;
+        }
       }
 
       .authUser {
         color: $white;
-        margin-right: 20px;
       }
     }
   }

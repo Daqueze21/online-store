@@ -18,12 +18,9 @@ const {Header} = Layout;
 
 const HeaderMenu = () => {
 	const user = useAppSelector((state: RootState) => state.userReducer);
-	const products = useAppSelector((state: RootState) => state.productsReducer);
 	const navigate = useNavigate();
 	const {authUser} = userSlice.actions;
 	const dispatch = useAppDispatch();
-
-	console.log('products:', products);
 
 	const login = () => {
 		dispatch(authUser(true));

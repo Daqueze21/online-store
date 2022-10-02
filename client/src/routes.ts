@@ -1,5 +1,5 @@
 import {ROUTES} from './const';
-import {Admin, Auth, Basket, ProductsPage, Shop} from './pages';
+import {Admin, Auth, Basket, Products, Shop} from './pages';
 
 export const authRoutes = [
 	{
@@ -27,6 +27,6 @@ export const publicRoutes = [
 	},
 	{
 		path: `${ROUTES.PUBLIC.PRODUCTS_ROUTE}/:id`,
-		Component: ProductsPage,
+		Component: Products,
 	},
 ];

@@ -1,5 +1,5 @@
-import AppRouter from './AppRouter';
+import AppText from './appText';
 import HeaderMenu from './HeaderMenu';
 import Sidebar from './Sidebar';
 
-export {AppRouter, HeaderMenu, Sidebar};
+export {AppText, HeaderMenu, Sidebar};
