@@ -5,14 +5,7 @@ import {useAppSelector} from 'hooks/redux';
 import {Admin, Auth, Basket, ProductsPage, Shop} from 'pages';
 import {RootState} from 'store/store';
 
-import {
-	ADMIN_ROUTE,
-	BASKET_ROUTE,
-	LOGIN_ROUTE,
-	PRODUCTS_ROUTE,
-	REGISTRATION_ROUTE,
-	SHOP_ROUTE,
-} from '../utils/const';
+import {ROUTES} from '../const';
 
 const AppRouter = () => {
 	// const isAuth = false;
@@ -22,15 +15,15 @@ const AppRouter = () => {
 		<Routes>
 			{user && (
 				<>
-					<Route path={ADMIN_ROUTE} element={<Admin />} />
-					<Route path={BASKET_ROUTE} element={<Basket />} />
+					<Route path={ROUTES.PRIVATE.ADMIN_ROUTE} element={<Admin />} />
+					<Route path={ROUTES.PRIVATE.BASKET_ROUTE} element={<Basket />} />
 				</>
 			)}
 			<>
-				<Route path={SHOP_ROUTE} element={<Shop />} />
-				<Route path={LOGIN_ROUTE} element={<Auth />} />
-				<Route path={REGISTRATION_ROUTE} element={<Auth />} />
-				<Route path={PRODUCTS_ROUTE} element={<ProductsPage />} />
+				<Route path={ROUTES.PUBLIC.SHOP_ROUTE} element={<Shop />} />
+				<Route path={ROUTES.PUBLIC.LOGIN_ROUTE} element={<Auth />} />
+				<Route path={ROUTES.PUBLIC.REGISTRATION_ROUTE} element={<Auth />} />
+				<Route path={ROUTES.PUBLIC.PRODUCTS_ROUTE} element={<ProductsPage />} />
 			</>
 			<Route path="*" element={<Navigate to="/" />} />
 		</Routes>

@@ -1,0 +1,91 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+@import './src/styles/fonts';
+
+.header {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 20px;
+  background: $menu-bg;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+
+    .storeName {
+      font-size: 30px;
+      line-height: 130%;
+      color: $white;
+      text-decoration: none;
+    }
+
+    .addressBlock {
+      display: flex;
+      height: 30px;
+      align-items: center;
+      
+      @include for-mobile-only {
+        display: none;
+      }
+
+      .address {
+        color: $white;
+        font-size: 12px;
+        margin-right: 10px;
+      }
+
+      .links {
+        display: flex;
+        height: 20px;
+
+        a {
+          color: $white;
+        }
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .buttonsBlock {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+
+      .logoutBtn {
+        color: $white;
+        font-size: 15px;
+
+        &:hover {
+          background: $btn-hover;
+        }
+      }
+
+      .loginBtn {
+        color: $white;
+        font-size: 15px;
+      }
+
+      .authUser {
+        color: $white;
+        margin-right: 20px;
+      }
+    }
+  }
+
+
+  @include for-mobile-only {
+		display: none;
+	}
+}

@@ -1,3 +1,5 @@
 import AppRouter from './AppRouter';
+import HeaderMenu from './HeaderMenu';
+import Sidebar from './Sidebar';
 
-export {AppRouter};
+export {AppRouter, HeaderMenu, Sidebar};

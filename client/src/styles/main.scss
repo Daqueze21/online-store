@@ -1,0 +1,120 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+body {
+	height: auto;
+	min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+	font-size: 16px;
+	font-family: $fira-font;
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+	min-height: 100%;
+	padding: 0 20px;
+
+	@include for-mobile-only {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	@include for-small-mobile-only {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: 0;
+	box-shadow: 0 0 0 1000px transparent inset;
+	transition: background-color 5000s ease-in-out 0s;
+	background: linear-gradient(
+		to top,
+		RGB(255 255 255 / 0%) 0%,
+		RGB(0 174 255 / 4%) 50%,
+		RGB(255 255 255 / 0%) 51%,
+		RGB(0 174 255 / 3%) 100%
+	);
+
+	@include for-mobile-only {
+		-webkit-text-fill-color: $white;
+	}
+}
+
+/* stylelint-disable */
+.ant-scrolling-effect {
+	width: unset !important;
+}
+/* stylelint-enable */

@@ -1,0 +1,48 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+
+.sidebar  {
+  position: absolute;
+  top: 0;
+	left: 0;
+  min-height: 100vh;
+  width: 250px;
+	background: $menu-bg;
+	color: red;
+
+  .menuContent {
+    display: none;
+
+    @include for-mobile-only {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      background: blue;
+    }
+  }
+}
+
+.sidebarButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: -35px;
+  display: none;
+  width: 36px;
+  height: 42px;
+  color: $white;
+  font-size: 18px;
+  line-height: 42px;
+  text-align: center;
+  background: $menu-bg;
+  border-radius: 0 2px 2px 0;
+  border: 1px $menu-bg;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  @include for-mobile-only {
+		display: block;
+	}
+}

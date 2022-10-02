@@ -1,0 +1,33 @@
+@import 'variables';
+
+$max-width: 1024;
+@mixin adaptive-font($pc-size, $mob-size) {
+	$add-size: $pc-size - $mob-size;
+	$max-width: $max-width - 320;
+
+	font-size: calc(#{$mob-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin adaptive-img($max-width) {
+	height: auto;
+	width: 100%;
+	max-width: #{$max-width};
+}
+
+@mixin for-tablet-only {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin for-mobile-only {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin for-small-mobile-only {
+	@media (max-width: 374px) {
+		@content;
+	}
+}

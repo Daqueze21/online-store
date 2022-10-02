@@ -1,39 +1,32 @@
-import {
-	ADMIN_ROUTE,
-	BASKET_ROUTE,
-	LOGIN_ROUTE,
-	PRODUCTS_ROUTE,
-	REGISTRATION_ROUTE,
-	SHOP_ROUTE,
-} from './utils/const';
+import {ROUTES} from './const';
 import {Admin, Auth, Basket, ProductsPage, Shop} from './pages';
 
 export const authRoutes = [
 	{
-		path: ADMIN_ROUTE,
+		path: ROUTES.PRIVATE.ADMIN_ROUTE,
 		Component: Admin,
 	},
 	{
-		path: BASKET_ROUTE,
+		path: ROUTES.PRIVATE.BASKET_ROUTE,
 		Component: Basket,
 	},
 ];
 
 export const publicRoutes = [
 	{
-		path: SHOP_ROUTE,
+		path: ROUTES.PUBLIC.SHOP_ROUTE,
 		Component: Shop,
 	},
 	{
-		path: LOGIN_ROUTE,
+		path: ROUTES.PUBLIC.LOGIN_ROUTE,
 		Component: Auth,
 	},
 	{
-		path: REGISTRATION_ROUTE,
+		path: ROUTES.PUBLIC.REGISTRATION_ROUTE,
 		Component: Auth,
 	},
 	{
-		path: `${PRODUCTS_ROUTE}/:id`,
+		path: `${ROUTES.PUBLIC.PRODUCTS_ROUTE}/:id`,
 		Component: ProductsPage,
 	},
 ];
