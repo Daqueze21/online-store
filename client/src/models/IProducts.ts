@@ -1,9 +1,9 @@
-export interface IProductsTypes {
+export interface IProductsType {
 	id: number;
 	name: string;
 }
 
-export interface IProductsBrands {
+export interface IProductsBrand {
 	id: number;
 	name: string;
 }

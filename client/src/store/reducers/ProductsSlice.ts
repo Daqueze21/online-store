@@ -1,11 +1,13 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {IProducts, IProductsBrands, IProductsTypes} from '../../models/IProducts';
+import {IProducts, IProductsBrand, IProductsType} from '../../models/IProducts';
 
 export type ProductsStateType = {
-	types: IProductsTypes[];
-	brand: IProductsBrands[];
+	types: IProductsType[];
+	brand: IProductsBrand[];
 	products: IProducts[];
+	selectedType: IProductsType | null;
+	selectedBrand: IProductsBrand | null;
 	isLoading: boolean;
 	error: string;
 };
@@ -38,6 +40,14 @@ const initialState: ProductsStateType = {
 			id: 3,
 			name: 'Mironpan',
 		},
+		{
+			id: 4,
+			name: 'Mironpan2',
+		},
+		{
+			id: 5,
+			name: 'Mironpan3',
+		},
 	],
 	products: [
 		{
@@ -65,15 +75,24 @@ const initialState: ProductsStateType = {
 			img: 'https://www.swissgear.ru/upload/imgPodarki/SA6677202408/SA6677202408.jpg',
 		},
 	],
+	selectedType: null,
+	selectedBrand: null,
 	isLoading: false,
 	error: 'no error',
 };
 
 // reducer
-const productsSlice = createSlice({
+export const productsSlice = createSlice({
 	name: 'Products',
 	initialState,
-	reducers: {},
+	reducers: {
+		setSelectedType(state, action: PayloadAction<IProductsType>) {
+			state.selectedType = action.payload;
+		},
+		setSelectedBrand(state, action: PayloadAction<IProductsBrand>) {
+			state.selectedBrand = action.payload;
+		},
+	},
 });
 
 export default productsSlice.reducer;

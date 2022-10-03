@@ -1,0 +1,40 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+
+.card {
+  width: 250px;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+
+  img{
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  @include for-mobile-only {
+    width: 90%;
+  }
+
+  .cardDescription {
+    border-top: 1px solid #0000000f;
+
+    .title {
+      font-size: 20;
+      margin: 10px 0 15px;
+      font-weight: 500;
+
+      @include for-mobile-only {
+        font-size: 16px;
+      }
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+
+      @include for-mobile-only {
+        text-align: left;
+      }
+    }
+  }
+}

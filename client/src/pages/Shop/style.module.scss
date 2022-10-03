@@ -1,0 +1,28 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+
+.productsPage {
+  width: 100%;
+  min-height: calc(100vh - 135px);
+  display: flex;
+  justify-content: center;
+
+  .blockWrap {
+    display: flex;
+
+    .productsWrapper {
+      display: flex;
+      flex-grow:1;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 10px;
+    }
+  }
+}
+
+.typeBar {
+  margin-top: 20px!important;
+  @include for-mobile-only {
+    display: none;
+  }
+}
