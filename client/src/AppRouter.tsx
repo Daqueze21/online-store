@@ -22,7 +22,7 @@ const AppRouter = () => {
 				<Route path={ROUTES.PUBLIC.SHOP_ROUTE} element={<Shop />} />
 				<Route path={ROUTES.PUBLIC.LOGIN_ROUTE} element={<Auth />} />
 				<Route path={ROUTES.PUBLIC.REGISTRATION_ROUTE} element={<Auth />} />
-				<Route path={ROUTES.PUBLIC.PRODUCTS_ROUTE} element={<Products />} />
+				<Route path={`${ROUTES.PUBLIC.PRODUCTS_ROUTE}/:id`} element={<Products />} />
 			</>
 			<Route path="*" element={<Navigate to="/" />} />
 		</Routes>

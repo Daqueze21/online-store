@@ -51,7 +51,9 @@ const ProductsList = () => {
 				xxl: 3,
 			}}
 			dataSource={products.products}
-			renderItem={item => <ListItem title={item.name} price={Number(item.price)} />}
+			renderItem={item => (
+				<ListItem id={item.id} title={item.name} price={Number(item.price)} />
+			)}
 		/>
 	);
 };

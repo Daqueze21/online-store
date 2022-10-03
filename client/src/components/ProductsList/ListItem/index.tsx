@@ -1,6 +1,8 @@
 import React, {FC, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {Card} from 'antd';
+import {ROUTES} from 'const';
 
 import AppText from '../../appText';
 
@@ -9,11 +11,14 @@ import styles from './style.module.scss';
 type PropsType = {
 	title: string;
 	price: number;
+	id: number;
 };
 
-const Sidebar: FC<PropsType> = ({title, price}) => {
+const Sidebar: FC<PropsType> = ({id, title, price}) => {
+	const navigate = useNavigate();
 	return (
 		<Card
+			onClick={() => navigate(`${ROUTES.PUBLIC.PRODUCTS_ROUTE}/${id}`)}
 			className={styles.card}
 			hoverable
 			bordered

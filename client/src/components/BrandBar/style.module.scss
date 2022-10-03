@@ -3,9 +3,39 @@
 @import './src/styles/fonts';
 
 .brandBar {
-  margin-bottom: 20px !important;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  & > * {
+    flex: 1 1 100px;
+  }
 
-  @include for-mobile-only {
-    display: none;
+  .brandBarCard{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &>div {
+      letter-spacing: 0.5px;
+      margin: auto;
+      padding: 5px;
+
+      @include for-mobile-only {
+        font-size: 16px !important;
+      }
+    }
+
+  }
+
+  .active {
+    color: $white;
+    background-color: #00A482;
+    opacity:80% ;
   }
 }

@@ -18,7 +18,7 @@ const TypeBar: FC<PropsType> = ({className}) => {
 	const {setSelectedType} = productsSlice.actions;
 
 	useEffect(() => {
-		if (products.selectedType) dispatch(setSelectedType(products.types[0]));
+		if (!products.selectedType) dispatch(setSelectedType(products.types[0]));
 	}, []);
 
 	console.log('products:', products);
